@@ -13,7 +13,7 @@ public class PowerManager {
 	public static HashMap<Powers,Integer> power = new HashMap<Powers,Integer>();
 	public static HashMap<Powers,Integer> energy = new HashMap<Powers,Integer>();
 	
-	public static void setupPowers() {
+	public PowerManager() {
 		/**
 		 * Örnektir
 		 * 

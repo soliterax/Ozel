@@ -30,7 +30,7 @@ public class ArmManager {
 	public static HashMap<String,Boots> boot = new HashMap<String,Boots>();
 	public static HashMap<Boots,Integer> bootDefense = new HashMap<Boots,Integer>();
 	
-	public static void setupArms() {
+	public ArmManager() {
 		
 		
 		

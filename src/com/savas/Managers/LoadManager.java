@@ -16,13 +16,22 @@ public class LoadManager {
 	
 	public static void setupAll() {
 		
-		PowerManager.setupPowers();
-		EntityManager.setupHE();
-		ArmManager.setupArms();
-		WeaponManager.setupWeapons();
-		RingManager.setupRings();
+		new PowerManager();
+		new EntityManager();
+		new ArmManager();
+		new WeaponManager();
+		new RingManager();
+		new ArenaManager();
+		new LootManager();
 		Tools.addAll(WeaponManager.weaponList);
 		Tools.addAll(PowerManager.nameList);
+		
+		//testTools();
+		
+	}
+	
+	@SuppressWarnings("unused")
+	private static void testTools() {
 		InventoryManager.setWeapon(Weapons.Elementum_Sword);
 		for(int i = 0; i < 5; i++) {
 			InventoryManager.usingPowers.add(PowerManager.PowerList.get(PowerManager.nameList.get(i)));

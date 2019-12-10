@@ -70,7 +70,7 @@ public class EntityManager {
 		}
 	}
 	
-	public static void setupHE() {
+	public EntityManager() {
 		
 		EntityManager.setName(Entity.Player, "Gizli Üye");
 		EntityManager.setHealth(Entity.Player, 500);

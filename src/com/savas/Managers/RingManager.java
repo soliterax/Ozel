@@ -16,7 +16,7 @@ public class RingManager {
 	public static HashMap<Rings,Integer> boostDefense = new HashMap<Rings,Integer>();
 	public static HashMap<Rings,Integer> boostEnergy = new HashMap<Rings,Integer>();
 	
-	public static void setupRings() {
+	public RingManager() {
 		
 		Ring.addRing("Blaze Yüzüðü", Rings.Blaze_Ring, 50, -25, 5, 200);
 		
