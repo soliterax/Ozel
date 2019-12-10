@@ -17,7 +17,8 @@ public class BossManager {
 	public static HashMap<Boss,Integer> bossDamage = new HashMap<Boss,Integer>();
 	public BossManager() {
 		addBoss("Haxtar", Boss.Haxtar, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Light_Room)), 200);
-		
+		addBoss("Derin Orman Ruhu", Boss.Deep_Forest_Soul, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Forest)), 500);
+		addBoss("Madenin Herkürü", Boss.Mine_Hercur_Boss, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deep_Mine)), 620);
 	}
 	
 	@SuppressWarnings("unused")
