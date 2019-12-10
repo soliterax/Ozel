@@ -35,8 +35,6 @@ public class LoadManager {
 	
 	public static boolean attack(int index) {
 		if(index == Messages.ist) {
-			Messages.playerStats();
-			Messages.enemyStats();
 			return true;
 		}
 		else if(Tools.get(index - 1) != null) {

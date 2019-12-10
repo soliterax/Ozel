@@ -1,41 +1,20 @@
 package com.savas.messages;
 
 import com.savas.Entity;
+import com.savas.Managers.ArenaManager;
 import com.savas.Managers.EntityManager;
 import com.savas.Managers.InventoryManager;
-import com.savas.Managers.PowerManager;
-import com.savas.Managers.WeaponManager;
 
+@SuppressWarnings("unused")
 public class Messages{
 	
 	public static int ist;
 	
-	public static void playerStats() {
-		
-		System.out.println("-----------------------------------\n");
-		System.out.println("Adýn : " + EntityManager.getName(Entity.Player));
-		System.out.println("Senin Canýn : " + EntityManager.getHealth(Entity.Player));
-		System.out.println("Senin Enerjin : " + EntityManager.getEnergy(Entity.Player) + "\n");
-		System.out.println("-----------------------------------\n");
-		
-	}
-	
-	public static void enemyStats() {
-		System.out.println("-----------------------------------\n");
-		System.out.println("Düþmanýn Adý : " + EntityManager.getName(Entity.Enemy));
-		System.out.println("Düþmanýn Enerjisi : " + EntityManager.getHealth(Entity.Enemy));
-		System.out.println("Düþmanýn Enerjisi : " + EntityManager.getEnergy(Entity.Enemy) + "\n");
-		System.out.println("-----------------------------------\n");
-	}
-	
-	public static void EnemyStats() {
-		
-		System.out.println("-----------------------------------\n");
-		System.out.println("Düþmanýn Adý: " + EntityManager.getName(Entity.Enemy));
-		System.out.println("Düþmanýn Caný: " + EntityManager.getHealth(Entity.Enemy));
-		System.out.println("Düþmanýn Enerjisi: " + EntityManager.getEnergy(Entity.Enemy) + "\n");
-		System.out.println("-----------------------------------\n");
-		
+	public static void showArenas() {
+		System.out.println("<----------------[ Arenalar ]---------------->");
+		for(int i = 0; i< ArenaManager.arenas.size(); i++) {
+			System.out.println((i+1) + ") " + ArenaManager.arenaName.get(ArenaManager.arenas.get(i)));
+		}
 	}
 	
 	public static void attack() {
