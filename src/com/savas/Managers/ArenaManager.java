@@ -15,7 +15,10 @@ public class ArenaManager {
 	public static HashMap<Arenas,Integer> arenaMaxBossHealth = new HashMap<Arenas,Integer>();
 	//first referensed object
 	public ArenaManager() {
+		addArena("Iþýk Odasý", Arenas.Light_Room, 1.0);
 		addArena("Orman", Arenas.Forest, 2.2);
+		addArena("Derin Magra", Arenas.Deep_Mine, 3.5);
+		addArena("Çöl", Arenas.Deserts, 5.0);
 	}
 	//add Arena function
 	public static void addArena(String name, Arenas arena, double multiplier) {
@@ -32,7 +35,11 @@ public class ArenaManager {
 	}
 	//Arenas
 	public enum Arenas {
-		Forest;
+		Light_Room,
+		Forest,
+		Deep_Mine,
+		Deserts
+		;
 	}
 	
 }

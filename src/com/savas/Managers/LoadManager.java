@@ -1,11 +1,8 @@
 package com.savas.Managers;
 
-import com.savas.Entity;
 import com.savas.Tools.Rings;
 import com.savas.Tools.Types;
 import com.savas.Tools.Weapons;
-import com.savas.messages.Messages;
-import com.savas.messages.ToolsMessage;
 
 import java.util.LinkedList;
 
@@ -14,7 +11,7 @@ public class LoadManager {
 	
 	public static LinkedList<String> Tools = new LinkedList<String>();
 	
-	public static void setupAll() {
+	static void Systems() {
 		
 		new PowerManager();
 		new EntityManager();
@@ -23,12 +20,18 @@ public class LoadManager {
 		new RingManager();
 		new ArenaManager();
 		new LootManager();
-		Tools.addAll(WeaponManager.weaponList);
-		Tools.addAll(PowerManager.nameList);
-		
-		//testTools();
+		new BattleManager();
+		new BossManager();
 		
 	}
+	
+	public static void setupAll() {
+		Systems();
+		Tools.addAll(WeaponManager.weaponList);
+		Tools.addAll(PowerManager.nameList);
+	}
+	
+	
 	
 	@SuppressWarnings("unused")
 	private static void testTools() {
@@ -42,34 +45,6 @@ public class LoadManager {
 		InventoryManager.invAdd(WeaponManager.weaponRawName.get(Weapons.Kanternka), Types.Weapon);
 	}
 	
-	public static boolean attack(int index) {
-		if(index == Messages.ist) {
-			return true;
-		}
-		else if(Tools.get(index - 1) != null) {
-			if(WeaponManager.weapon.get(Tools.get(index - 1)) == null) {
-				if(ToolsMessage.sendMessage(PowerManager.PowerList.get(Tools.get(index - 1))) == true) {
-					EntityManager.setEnergy(Entity.Player, EntityManager.getEnergy(Entity.Player) - PowerManager.energy.get(PowerManager.PowerList.get(Tools.get(index-1))));;
-					EntityManager.setHealth(Entity.Enemy, EntityManager.getHealth(Entity.Enemy) - PowerManager.power.get(PowerManager.PowerList.get(Tools.get(index - 1))));
-					if(EntityManager.getHealth(Entity.Enemy)<= 0) {
-						return false;
-					}
-				}
-			}
-			else {
-				if(ToolsMessage.sendMessage(WeaponManager.weapon.get(Tools.get(index - 1))) == true) {
-					EntityManager.setHealth(Entity.Enemy, EntityManager.getHealth(Entity.Enemy) - WeaponManager.attackPower.get(WeaponManager.weapon.get(Tools.get(index - 1))));
-					if(EntityManager.getHealth(Entity.Enemy)<= 0) {
-						return false;
-					}
-				}
-			}
-			return true;
-		}
-		else {
-			return false;
-		}
-	}
 	
 	
 	
