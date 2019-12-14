@@ -23,6 +23,7 @@ public class LoadManager {
 		new LootManager();
 		new BattleManager();
 		new BossManager();
+		new EffectManager();
 		System.out.println("All System Loaded! Good Play Game :)");
 		try {
 			TimeUnit.SECONDS.sleep(2);
