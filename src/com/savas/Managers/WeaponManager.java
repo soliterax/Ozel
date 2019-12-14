@@ -3,9 +3,6 @@ package com.savas.Managers;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import com.savas.Tools.Weapons;
-import com.savas.powers.Weapon;
-
 public class WeaponManager {
 	
 	public static LinkedList<String> weaponList = new LinkedList<String>();
@@ -14,9 +11,22 @@ public class WeaponManager {
 	public static HashMap<Weapons,Integer> attackPower = new HashMap<Weapons,Integer>();
 	
 	public WeaponManager() {
-		Weapon.addWeapon("Elementum Kýlýcý", Weapons.Elementum_Sword, 250);
-		Weapon.addWeapon("Kanternka", Weapons.Kanternka, 650);
-		Weapon.addWeapon("Sýrýk", Weapons.Nyouboi, 1250);
+		addWeapon("Elementum Kýlýcý", Weapons.Elementum_Sword, 250);
+		addWeapon("Kanternka", Weapons.Kanternka, 650);
+		addWeapon("Sýrýk", Weapons.Nyouboi, 1250);
+	}
+	
+	public static void addWeapon(String Name, Weapons weapon, int attackPower) {
+		WeaponManager.weaponList.add(Name);
+		WeaponManager.weaponRawName.put(weapon, Name);
+		WeaponManager.weapon.put(Name, weapon);
+		WeaponManager.attackPower.put(weapon, attackPower);
+	}
+	
+	public enum Weapons {
+		Elementum_Sword,
+		Kanternka,
+		Nyouboi;
 	}
 
 }

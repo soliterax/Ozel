@@ -1,8 +1,8 @@
 package com.savas.Managers;
 
-import com.savas.Tools.Rings;
-import com.savas.Tools.Types;
-import com.savas.Tools.Weapons;
+import com.savas.Managers.InventoryManager.Types;
+import com.savas.Managers.RingManager.Rings;
+import com.savas.Managers.WeaponManager.Weapons;
 
 import java.util.LinkedList;
 

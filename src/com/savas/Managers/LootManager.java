@@ -3,8 +3,8 @@ package com.savas.Managers;
 import java.util.LinkedList;
 import java.util.Random;
 
-import com.savas.Tools.Types;
-import com.savas.Tools.Weapons;
+import com.savas.Managers.InventoryManager.Types;
+import com.savas.Managers.WeaponManager.Weapons;
 
 public class LootManager {
 	

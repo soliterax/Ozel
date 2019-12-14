@@ -3,14 +3,13 @@ package com.savas.Managers;
 import java.util.HashMap;
 import java.util.LinkedList;
 
-import com.savas.Tools.Boots;
-import com.savas.Tools.Chestplates;
-import com.savas.Tools.Helmets;
-import com.savas.Tools.Leggings;
-import com.savas.Tools.Powers;
-import com.savas.Tools.Rings;
-import com.savas.Tools.Types;
-import com.savas.Tools.Weapons;
+import com.savas.Managers.ArmManager.Boots;
+import com.savas.Managers.ArmManager.Chestplates;
+import com.savas.Managers.ArmManager.Helmets;
+import com.savas.Managers.ArmManager.Leggings;
+import com.savas.Managers.PowerManager.Powers;
+import com.savas.Managers.RingManager.Rings;
+import com.savas.Managers.WeaponManager.Weapons;
 
 public class InventoryManager {
 	//Kullanilan Armorlar
@@ -150,6 +149,11 @@ public class InventoryManager {
 			usingRings.remove(usingRings.indexOf(ring));
 		}
 		else return;
+	}
+	
+	public enum Types {
+		Weapon,Arm,Ring,Power;
+
 	}
 	
 }

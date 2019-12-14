@@ -2,8 +2,8 @@ package com.savas.messages;
 
 import java.util.concurrent.TimeUnit;
 
-import com.savas.Tools.Powers;
-import com.savas.Tools.Weapons;
+import com.savas.Managers.PowerManager.Powers;
+import com.savas.Managers.WeaponManager.Weapons;
 
 public class ToolsMessage{
 	

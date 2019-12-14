@@ -19,9 +19,9 @@ public class BossManager {
 		addBoss("Haxtar", Boss.Haxtar, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Light_Room)), 200);
 		addBoss("Derin Orman Ruhu", Boss.Deep_Forest_Soul, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Forest)), 500);
 		addBoss("Madenin Herkürü", Boss.Mine_Hercur_Boss, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deep_Mine)), 620);
+		addBoss("Çölün Cehennem Ruhu", Boss.Deserts_Hell_King, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deserts)), 750);
 	}
 	
-	@SuppressWarnings("unused")
 	private static void addBoss(String bossNamea, Boss bossa, int health, int Damage) {
 		
 		boss.add(bossa);
@@ -35,7 +35,8 @@ public class BossManager {
 	public enum Boss {
 		Haxtar,
 		Deep_Forest_Soul,
-		Mine_Hercur_Boss
+		Mine_Hercur_Boss,
+		Deserts_Hell_King
 		;
 	}
 	
