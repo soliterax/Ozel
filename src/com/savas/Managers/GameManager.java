@@ -2,7 +2,7 @@ package com.savas.Managers;
 
 import java.util.Scanner;
 
-import com.savas.Entity;
+import com.savas.Managers.EntityManager.Entity;
 import com.savas.messages.Messages;
 
 public class GameManager {

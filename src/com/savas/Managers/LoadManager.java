@@ -5,6 +5,7 @@ import com.savas.Managers.RingManager.Rings;
 import com.savas.Managers.WeaponManager.Weapons;
 
 import java.util.LinkedList;
+import java.util.concurrent.TimeUnit;
 
 public class LoadManager {
 
@@ -22,6 +23,14 @@ public class LoadManager {
 		new LootManager();
 		new BattleManager();
 		new BossManager();
+		System.out.println("All System Loaded! Good Play Game :)");
+		try {
+			TimeUnit.SECONDS.sleep(2);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 		
 	}
 	

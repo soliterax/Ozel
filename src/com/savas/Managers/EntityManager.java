@@ -2,8 +2,6 @@ package com.savas.Managers;
 
 import java.util.Random;
 
-import com.savas.Entity;
-
 public class EntityManager {
 	
 	private static Random rand = new Random();
@@ -79,5 +77,11 @@ public class EntityManager {
 		EntityManager.setHealth(Entity.Enemy, rand.nextInt(5000));
 		EntityManager.setEnergy(Entity.Enemy, 1000);
 	}
-
+	
+	public enum Entity {
+		
+		Player,Enemy;
+		
+	}
+	
 }

@@ -1,6 +1,6 @@
 package com.savas.messages;
 
-import com.savas.Entity;
+import com.savas.Managers.EntityManager.Entity;
 import com.savas.Managers.ArenaManager;
 import com.savas.Managers.EntityManager;
 import com.savas.Managers.InventoryManager;

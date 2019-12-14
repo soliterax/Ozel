@@ -2,7 +2,7 @@ package com.savas.Managers;
 
 import java.util.Random;
 
-import com.savas.Entity;
+import com.savas.Managers.EntityManager.Entity;
 import com.savas.Managers.ArenaManager.Arenas;
 
 public class BattleManager {
