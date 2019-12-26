@@ -19,10 +19,8 @@ public class Saldir {
 		System.out.println("Oyun bitti OYnadýðýnýz için teþekkür ederiz.");
 		}
 		else {
-			LoadManager.setupAll();
-			for(int i = 0; i<BossManager.boss.size(); i++) {
-				System.out.println((i+1) + ") " + BossManager.bossName.get(BossManager.boss.get(i)));
-			}
+			new LoadManager();
+			Messages.inventory();
 		}
 	}
 

@@ -1,6 +1,9 @@
 package com.savas.Managers;
 
+import java.util.LinkedList;
 import java.util.Random;
+
+import com.savas.Managers.EffectManager.Effects;
 
 public class EntityManager {
 	
@@ -9,10 +12,12 @@ public class EntityManager {
 	public static String pName;
 	public static int pHealth;
 	public static int pEnergy;
+	public static LinkedList<Effects> playertakeEffect = new LinkedList<Effects>();
 	
 	public static String eName;
 	public static int eHealth;
 	public static int eEnergy;
+	public static LinkedList<Effects> enemytakeEffect = new LinkedList<Effects>();
 	
 	public static int getHealth(Entity entity) {
 		if(entity == Entity.Player) {

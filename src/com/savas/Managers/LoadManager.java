@@ -31,17 +31,15 @@ public class LoadManager {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		testTools();
 		
 		
 	}
-	
-	public static void setupAll() {
+	public LoadManager() {
 		Systems();
 		Tools.addAll(WeaponManager.weaponList);
 		Tools.addAll(PowerManager.nameList);
 	}
-	
-	
 	
 	@SuppressWarnings("unused")
 	private static void testTools() {
