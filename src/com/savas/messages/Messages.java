@@ -1,8 +1,8 @@
 package com.savas.messages;
 
-import com.savas.Managers.EntityManager.Entity;
 import com.savas.Managers.ArenaManager;
-import com.savas.Managers.EntityManager;
+import com.savas.Managers.BossManager;
+import com.savas.Managers.BossManager.Boss;
 import com.savas.Managers.InventoryManager;
 
 @SuppressWarnings("unused")
@@ -71,6 +71,13 @@ public class Messages{
 		System.out.println("4) Çık");
 		System.out.println("\n------------------------------------");
 		
+	}
+	
+	public static void stats(Boss bos) {
+		System.out.println("\n------------------------------------");
+		System.out.println("Düşmanın Adı: " + BossManager.bossName.get(bos));
+		System.out.println("Düşmanın Canı: " + BossManager.bossHealth.get(bos));
+		System.out.println("Tehlike Seviyesi: ");
 	}
 
 }

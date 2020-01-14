@@ -21,6 +21,10 @@ public class Saldir {
 		else {
 			new LoadManager();
 			Messages.inventory();
+			Messages.attack();
+			Messages.eylem();
+			Messages.showArenas();
+			
 		}
 	}
 
