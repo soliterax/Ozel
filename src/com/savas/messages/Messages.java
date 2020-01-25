@@ -77,7 +77,8 @@ public class Messages{
 		System.out.println("\n------------------------------------");
 		System.out.println("Düþmanýn Adý: " + BossManager.bossName.get(bos));
 		System.out.println("Düþmanýn Caný: " + BossManager.bossHealth.get(bos));
-		System.out.println("Tehlike Seviyesi: ");
+		System.out.println("Düþmanýn Enerjisi: " + BossManager.bossEnergy.get(bos));
+		System.out.println("Tehlike Seviyesi: " + BossManager.bossLevel.get(bos));
 	}
 
 }

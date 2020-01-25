@@ -6,9 +6,12 @@ public class BossAppearAnim {
 	
 	public static void revealBoss(Boss boss) {
 		switch(boss) {
-		case Haxtar:
-			break;
-		case Deep_Forest_Soul:
+			case Haxtar:
+				break;
+			case Deep_Forest_Soul:
+				break;
+			default:
+				break;
 		}
 	}
 

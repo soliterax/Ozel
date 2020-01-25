@@ -3,6 +3,7 @@ package com.savas.Managers;
 import java.util.LinkedList;
 import java.util.Random;
 
+import com.savas.Exceptions.PlayerNameNullException;
 import com.savas.Managers.EffectManager.Effects;
 
 public class EntityManager {
@@ -48,7 +49,12 @@ public class EntityManager {
 	
 	public static void setName(Entity entity, String name) {
 		if(entity == Entity.Player) {
-			pName = name;
+			if(name != null) {
+				pName = name;
+			}
+			else {
+				throw new PlayerNameNullException("Name is null");
+			}
 		}
 		else {
 			eName = name;

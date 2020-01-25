@@ -9,19 +9,30 @@ public class GameManager {
 	
 	private static Scanner input = new Scanner(System.in);
 	
-	private static int secme;
+	private static int secme = 0;
 	
-	public static void Start() {
+	public GameManager() {
 		
 		new LoadManager();
 		
 		System.out.println("Adýnýzý Söylermisiniz ?");
-		EntityManager.setName(Entity.Player, input.nextLine());
+		String name =input.nextLine();
+		
+		EntityManager.setName(Entity.Player, name);
 		while(true) {
 			Messages.eylem();
 			secme = input.nextInt();
 			if(secme == 1) {
 				new BattleManager();
+			}
+			else if(secme == 2) {
+				Messages.inventory();
+			}
+			else if(secme == 3) {
+				System.out.println("Henüz kullanýma açýlmamýþtýr..");
+			}
+			else {
+				return;
 			}
 			
 		}

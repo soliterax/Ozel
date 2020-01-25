@@ -16,14 +16,16 @@ public class BossManager {
 	public static HashMap<Boss,Integer> bossHealth = new HashMap<Boss,Integer>();
 	public static HashMap<Boss,Integer> bossDamage = new HashMap<Boss,Integer>();
 	public static HashMap<Boss,Double> bossEnergy = new HashMap<Boss,Double>();
+	public static HashMap<Boss,WarningLevel> bossLevel = new HashMap<Boss,WarningLevel>();
+	//All bosses this block loaded and recorded
 	public BossManager() {
-		addBoss("Haxtar", Boss.Haxtar, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Light_Room)), 200, 500);
-		addBoss("Derin Orman Ruhu", Boss.Deep_Forest_Soul, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Forest)), 500, 1000);
-		addBoss("Madenin Herkürü", Boss.Mine_Hercur_Boss, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deep_Mine)), 620, 1250);
-		addBoss("Çölün Cehennem Ruhu", Boss.Deserts_Hell_King, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deserts)), 750, 1500);
+		addBoss("Haxtar", Boss.Haxtar, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Light_Room)), 200, 500,WarningLevel.Kolay);
+		addBoss("Derin Orman Ruhu", Boss.Deep_Forest_Soul, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Forest)), 500, 1000,WarningLevel.Normal);
+		addBoss("Madenin Herkürü", Boss.Mine_Hercur_Boss, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deep_Mine)), 620, 1250,WarningLevel.Zor);
+		addBoss("Çölün Cehennem Ruhu", Boss.Deserts_Hell_King, rand.nextInt(ArenaManager.arenaMaxBossHealth.get(Arenas.Deserts)), 750, 1500,WarningLevel.Tehlikeli);
 	}
-	
-	private static void addBoss(String bossNamea, Boss bossa, int health, int Damage,double energy) {
+	//not a edit pls
+	private static void addBoss(String bossNamea, Boss bossa, int health, int Damage,double energy, WarningLevel level) {
 		
 		boss.add(bossa);
 		bossName.put(bossa, bossNamea);
@@ -31,9 +33,18 @@ public class BossManager {
 		bossHealth.put(bossa, health);
 		bossDamage.put(bossa, Damage);
 		bossEnergy.put(bossa, energy);
+		bossLevel.put(bossa, level);
 		
 	}
-	
+	//this method boss warning levels list
+	public enum WarningLevel {
+		Kolay,
+		Normal,
+		Zor,
+		Tehlikeli,
+		Olumcul;
+	}
+	//Add a boss
 	public enum Boss {
 		Haxtar,
 		Deep_Forest_Soul,

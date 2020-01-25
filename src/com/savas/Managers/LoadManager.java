@@ -21,7 +21,6 @@ public class LoadManager {
 		new RingManager();
 		new ArenaManager();
 		new LootManager();
-		new BattleManager();
 		new BossManager();
 		new EffectManager();
 		System.out.println("All System Loaded! Good Play Game :)");
