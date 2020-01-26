@@ -22,6 +22,7 @@ public class GameManager {
 		while(true) {
 			Messages.eylem();
 			secme = input.nextInt();
+			
 			if(secme == 1) {
 				new BattleManager();
 			}
