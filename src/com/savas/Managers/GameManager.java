@@ -15,7 +15,7 @@ public class GameManager {
 		
 		new LoadManager();
 		
-		System.out.println("Adınızı Söylermisiniz ?");
+		System.out.println("AdÄ±nÄ±zÄ± SÃ¶ylermisiniz ?");
 		String name =input.nextLine();
 		
 		EntityManager.setName(Entity.Player, name);
@@ -30,7 +30,7 @@ public class GameManager {
 				Messages.inventory();
 			}
 			else if(secme == 3) {
-				System.out.println("Henüz kullanıma açılmamıştır..");
+				System.out.println("HenÃ¼z kullanÄ±ma aÃ§Ä±lmamÄ±ÅŸtÄ±r..");
 			}
 			else {
 				return;

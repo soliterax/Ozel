@@ -17,7 +17,7 @@ public class Saldir {
 		if(test == false) {
 		new GameManager();
 		
-		System.out.println("Oyun bitti OYnadığınız için teşekkür ederiz.");
+		System.out.println("Oyun bitti OynadÄ±ÄŸÄ±nÄ±z iÃ§in teÅŸekkÃ¼r ederiz.");
 		}
 		else {
 			new LoadManager();

@@ -4,7 +4,6 @@ import java.awt.Color;
 import java.util.Random;
 import java.util.Scanner;
 
-import com.savas.Extensions.Colors;
 import com.savas.Managers.BossManager.Boss;
 import com.savas.Managers.EntityManager.Entity;
 import com.savas.messages.Messages;
@@ -24,12 +23,12 @@ public class BattleManager {
 	public BattleManager() {
 		
 		Messages.showArenas();
-		System.out.println("\nLütfen hangi Arenada Savaşıcağınızı seçiniz..");
+		System.out.println("\nLÃ¼tfen hangi Arenada SavaÅŸÄ±caÄŸÄ±nÄ±zÄ± seÃ§iniz..");
 		ArenaManager.joinedArena = ArenaManager.arenas.get(input.nextInt() - 1);
 		while(true) {
 			
 			Messages.attack();
-			System.out.println("Lütfen saldırı seçiniz!");
+			System.out.println("LÃ¼tfen saldÄ±rÄ± seÃ§iniz!");
 			int saldiri = input.nextInt();
 			
 			switch(saldiri){

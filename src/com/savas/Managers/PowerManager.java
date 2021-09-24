@@ -12,18 +12,18 @@ public class PowerManager {
 	
 	public PowerManager() {
 		/**
-		 * Örnektir
+		 * ï¿½rnektir
 		 * 
-		 * AllPower.addPower(Saldýrýnýn Adý, Saldýrý, Saldýrýnýn Gücü, Saldýrýnýn harcadýðý enerji);
+		 * AllPower.addPower(Saldï¿½rï¿½nï¿½n Adï¿½, Saldï¿½rï¿½, Saldï¿½rï¿½nï¿½n Gï¿½cï¿½, Saldï¿½rï¿½nï¿½n harcadï¿½ï¿½ï¿½ enerji);
 		 * 
 		 * */
 		addPower("Kamehameha", Powers.Kamehameha, 500, 250);
-		addPower("Fýrtýna", Powers.Fýrtýna, 200, 50);
+		addPower("Fï¿½rtï¿½na", Powers.FÄ±rtÄ±na, 200, 50);
 		addPower("Ouch Kamehameha", Powers.Ouch_Kamehameha, 1000, 900);
-		addPower("Lavlý Yumruk", Powers.Lavlý_Yumruk, 100, 30);
-		addPower("Iþýnlanan Hançer", Powers.Iþinlanan_Hancer, 100, 25);
+		addPower("Lavlï¿½ Yumruk", Powers.LavlÄ±_Yumruk, 100, 30);
+		addPower("Iï¿½ï¿½nlanan Hanï¿½er", Powers.IÅŸinlanan_Hancer, 100, 25);
 		addPower("Deprem", Powers.Earthquick, 50, 100);
-		addPower("Aslan Pençesi", Powers.Lion_Slash, 500, 200);
+		addPower("Aslan Penï¿½esi", Powers.Lion_Slash, 500, 200);
 		addPower("Dondurucu Su", Powers.Water_Freezer, 400, 150);
 		addPower("Soul Seal", Powers.Soul_Seal, 300, 70);
 		addPower("Dragon Rage", Powers.Dragon_Rage, 350, 80);
@@ -40,10 +40,10 @@ public class PowerManager {
 	public enum Powers {
 
 		Kamehameha, 
-		Fýrtýna, 
+		FÄ±rtÄ±na,
 		Ouch_Kamehameha, 
-		Lavlý_Yumruk, 
-		Iþinlanan_Hancer, 
+		LavlÄ±_Yumruk,
+		IÅŸinlanan_Hancer,
 		Earthquick, 
 		Lion_Slash, 
 		Water_Freezer,
